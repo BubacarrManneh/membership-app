@@ -3,7 +3,9 @@ import AccountRegistration from '../Components/AccountRegistration'
 import SingIn from '../Components/SingIn'
 import SignInPage from './SignInPage'
 
+
 const Home = () => {
+
   return (
     <div className='Home'>
         <section className='Components'>
@@ -12,7 +14,7 @@ const Home = () => {
         </section>
         <hr></hr>
         <section className='LoginPage'>
-            <SignInPage />
+          <SignInPage />
         </section>
        
     </div>

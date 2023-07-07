@@ -2,34 +2,22 @@ import React from 'react'
 
 const SignInPage = () => {
   return (
-    <div className='Register'>
-        <h1>Become a member</h1>
+    <div className='Container'>
+        <h1>Login to account</h1>
         <form className='Form'>
             <section className='FormInput'>
-                <label>Username</label>
-                <input placeholder='Choose a username'></input>
+                <label>Email <span>*</span></label>
+                <input required type="email" placeholder='Enter Email'></input>
             </section>
 
             <section className='FormInput'>
-                <label>First Name</label>
-                <input placeholder='Enter first name'></input>
+                <label>Password <span>*</span></label>
+                <input type="password" required placeholder='Enter password'></input>
             </section>
 
-            <section className='FormInput'>
-                <label>Last Name</label>
-                <input placeholder='Enter last name'></input>
+            <section className="FormInput">
+                <button type='submit' className='Submit'>Login</button>
             </section>
-
-            <section className='FormInput'>
-                <label>Email</label>
-                <input placeholder='Enter email'></input>
-            </section>
-
-            <section className='FormInput'>
-                <label>Pastword</label>
-                <input placeholder='Enter password'></input>
-            </section>
-            <button className='LoginBtn'>Register</button>
         </form>
     </div>
   )

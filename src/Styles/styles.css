@@ -1,22 +1,25 @@
 /* Home component */
 .Home {
   background: rgb(91, 165, 188);
-  /* margin: 5rem auto; */
   margin: 0 10rem;
   height: 100dvh;
+  overflow-y: hidden;
 }
 
   .Components {
     display: flex;
     justify-content: right;
+    gap: .5rem;
+    margin-right: 2dvb;
+    padding: 1dvb;
   }
   
 /* Sign up component */
 .Btn {
   display: flex;
   align-items: center;
-  margin: 1rem 1rem ;
   font-size: .5em;
+  padding-right: 1dvb;
   background-color: rgb(63, 61, 61);
   color:  rgb(249, 246, 246);
   border-radius: .5rem;
@@ -28,25 +31,27 @@
 }
 
 
-/* SignIn Component */
-
-
 /* SignInPage */
 
-.Register {
-  margin: 3rem 0;
-  text-transform: uppercase;
+.Container {
+  margin: 1rem 0;
   color:  rgb(249, 246, 246);
+}
+
+.Container h1 {
+  text-transform: uppercase;
 }
 .Form {
   width: 20rem;
-  margin: 1rem auto;
-  color: rgb(249, 246, 246);
+  margin: .5rem auto;
+  padding: 1.5rem 0;
+  color: rgb(148, 145, 145);
   font-weight: bold;
+  background: whitesmoke;
 }
 
   .FormInput{
-    padding: .2rem 2rem;
+    padding:0 2rem ;
   }
 
     .FormInput label, input, button {
@@ -59,20 +64,52 @@
       outline: none;
       border: none;
     }
-
+    .Form label {
+      padding: .5rem 0;
+    }
+    .FormInput span {
+      color: red;
+    }
     .FormInput input:focus {
       border: inset 1px blue;
       outline: none;
     }
 
-.LoginBtn {
-  width: 21.5dvw;
+.Submit {
+  width: 21.2dvw;
   padding: .5rem;
-  margin: .5rem 2rem;
+  margin-top: 1rem;
+  margin-bottom: 0;
   justify-content: center;
   color:  rgb(249, 246, 246);
   background: green;
   border: none;
   border-radius: .2rem;
   font-weight: bold;
+}
+
+
+/* Small screen styles */
+@media (max-width: 750px) {
+  .Home {
+    margin: 0 auto;
+    width: max-content;
+    overflow-x: hidden;
+  }
+
+  .FormInput input,label{
+    width: 16rem;
+    box-sizing: border-box;
+  }
+
+  .Submit {
+    width: 16rem;
+    margin-top: 1rem;
+    margin-bottom: 0;
+  }
+  .Btn{
+    width: 5rem;
+    font-size: 1.2dvb;
+  }
+
 }
