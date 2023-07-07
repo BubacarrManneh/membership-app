@@ -1,5 +1,78 @@
-.App {
-  text-align: center;
+/* Home component */
+.Home {
+  background: rgb(91, 165, 188);
+  /* margin: 5rem auto; */
+  margin: 0 10rem;
+  height: 100dvh;
+}
+
+  .Components {
+    display: flex;
+    justify-content: right;
+  }
+  
+/* Sign up component */
+.Btn {
+  display: flex;
+  align-items: center;
+  margin: 1rem 1rem ;
+  font-size: .5em;
+  background-color: rgb(63, 61, 61);
+  color:  rgb(249, 246, 246);
+  border-radius: .5rem;
+  cursor: pointer;
+}
+.BtnText {
+  margin: 0 .2rem;
+  padding: .5rem;
+}
+
+
+/* SignIn Component */
+
+
+/* SignInPage */
+
+.Register {
+  margin: 3rem 0;
+  text-transform: uppercase;
+  color:  rgb(249, 246, 246);
+}
+.Form {
+  width: 20rem;
+  margin: 1rem auto;
+  color: rgb(249, 246, 246);
   font-weight: bold;
-  margin: 2rem auto;
+}
+
+  .FormInput{
+    padding: .2rem 2rem;
+  }
+
+    .FormInput label, input, button {
+      display: flex;
+    }
+    .FormInput input{
+      width: 20dvw;
+      padding: .5rem;
+      border-radius: .2rem;
+      outline: none;
+      border: none;
+    }
+
+    .FormInput input:focus {
+      border: inset 1px blue;
+      outline: none;
+    }
+
+.LoginBtn {
+  width: 21.5dvw;
+  padding: .5rem;
+  margin: .5rem 2rem;
+  justify-content: center;
+  color:  rgb(249, 246, 246);
+  background: green;
+  border: none;
+  border-radius: .2rem;
+  font-weight: bold;
 }
