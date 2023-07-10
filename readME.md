@@ -52,6 +52,8 @@ The file structure of the React application is as follows:
 │   │   ├── ProfilePhotoUpload.js
 │   │   ├── EditAccountInfo.js
 │   │   ├── DeleteAccount.js
+│   │   ├── HomeNav.js
+│   │   ├── NavBar.js
 │   │   └── ...
 │   ├── pages
 │   │   ├── HomePage.js
