@@ -1,9 +1,12 @@
-import React from 'react'
+import HomeNav from '../Components/HomeNav'
 
 const RegistrationPage = () => {
+    
   return (
     <div className='Container'>
-        <h1>Become a member</h1>
+        <HomeNav />
+
+        <h3>Become a member</h3>
         <form className='Form'>
             
             <section className='FormInput'>
@@ -35,6 +38,9 @@ const RegistrationPage = () => {
                 <button className='Submit'>Register</button>
             </section>
         </form>
+        <section className='Option'>
+            <p>Already a member?</p><span>Sign In</span>
+        </section>
     </div>
   )
 }

@@ -1,6 +1,9 @@
+.App {
+  background:rgb(91, 165, 188);
+}
+
 /* Home component */
 .Home {
-  background: rgb(91, 165, 188);
   margin: 0 10rem;
   height: 100dvh;
   overflow-y: hidden;
@@ -34,11 +37,17 @@
 /* SignInPage */
 
 .Container {
-  margin: 1rem 0;
+  /* margin: 1rem 0; */
+  background: rgb(91, 165, 188);
+  margin: 0 10rem;
+  height: 100dvh;
+  overflow-y: hidden;
   color:  rgb(249, 246, 246);
+  box-sizing: border-box ;
 }
 
-.Container h1 {
+.Container h1, h3 {
+  margin-top: .5rem;
   text-transform: uppercase;
 }
 .Form {
@@ -48,6 +57,7 @@
   color: rgb(148, 145, 145);
   font-weight: bold;
   background: whitesmoke;
+  box-shadow: aqua .5rem solid;
 }
 
   .FormInput{
@@ -88,6 +98,16 @@
   font-weight: bold;
 }
 
+.Option {
+  display: flex;
+  justify-content: center;
+}
+
+.Option span {
+  margin: 0 .5dvb;
+  color: black;
+  cursor: pointer;
+}
 
 /* Small screen styles */
 @media (max-width: 750px) {
@@ -97,6 +117,15 @@
     overflow-x: hidden;
   }
 
+  .Container {
+    margin: 0 auto;
+    width: max-content;
+    overflow-x: hidden;
+  }
+
+    .Container > h3 {
+      margin-top: 5rem;
+    }
   .FormInput input,label{
     width: 16rem;
     box-sizing: border-box;

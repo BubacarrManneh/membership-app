@@ -1,24 +1,41 @@
-import React from 'react'
+import { useState } from 'react';
+import HomeNav from '../Components/HomeNav';
 
 const SignInPage = () => {
+    const [ data, setData ] = useState({
+        email: "",
+        password: ""
+    })
+   
+
+   const onChange = (e) => {
+        setData(console.log(e.target.value))
+   }
+
+ 
   return (
     <div className='Container'>
-        <h1>Login to account</h1>
-        <form className='Form'>
+         <HomeNav />
+
+        <h3>Login to account</h3>
+        <form className='Form' id='form'>
             <section className='FormInput'>
                 <label>Email <span>*</span></label>
-                <input required type="email" placeholder='Enter Email'></input>
+                <input type="email" onChange={onChange} required placeholder='Enter Email'></input>
             </section>
 
             <section className='FormInput'>
                 <label>Password <span>*</span></label>
-                <input type="password" required placeholder='Enter password'></input>
+                <input type="password" onChange={onChange} required placeholder='Enter password'></input>
             </section>
 
             <section className="FormInput">
-                <button type='submit' className='Submit'>Login</button>
+                <button type='submit' className='Submit' >Login</button>
             </section>
         </form>
+        <section className='Option'>
+            <p>Not yet a member?</p><span>Create account</span>
+        </section>
     </div>
   )
 }

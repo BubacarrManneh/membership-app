@@ -1,22 +1,13 @@
 import React from 'react'
-import AccountRegistration from '../Components/AccountRegistration'
-import SingIn from '../Components/SingIn'
-import SignInPage from './SignInPage'
+import Navbar from '../Components/Navbar';
 
 
 const Home = () => {
 
+
   return (
     <div className='Home'>
-        <section className='Components'>
-            <AccountRegistration/>
-            <SingIn/>
-        </section>
-        <hr></hr>
-        <section className='LoginPage'>
-          <SignInPage />
-        </section>
-       
+      <Navbar />
     </div>
   )
 }
