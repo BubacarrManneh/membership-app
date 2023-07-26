@@ -7,7 +7,7 @@ const SingIn = () => {
   const navigate = useNavigate()
 
   const Signin = (() => {
-    navigate("/signup")
+    navigate("/signin")
   })
   return (
     <>
