@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import HomeNav from '../Components/HomeNav';
+import { useNavigate } from 'react-router-dom';
 
 const SignInPage = () => {
     const [ data, setData ] = useState({
@@ -12,6 +13,11 @@ const SignInPage = () => {
         setData(console.log(e.target.value))
    }
 
+   const navigate = useNavigate()
+
+   const ToSignup = () => {
+     navigate("/signup")
+   }
  
   return (
     <div className='Container'>
@@ -34,7 +40,7 @@ const SignInPage = () => {
             </section>
         </form>
         <section className='Option'>
-            <p>Not yet a member?</p><span>Create account</span>
+            <p>Not yet a member?</p><span onClick={ToSignup}>Create account</span>
         </section>
     </div>
   )

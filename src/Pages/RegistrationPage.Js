@@ -1,7 +1,13 @@
+import { useNavigate } from 'react-router-dom'
 import HomeNav from '../Components/HomeNav'
 
 const RegistrationPage = () => {
     
+    const navigate = useNavigate()
+
+    const ToSignin = (() => {
+        navigate("/signin")
+    })
   return (
     <div className='Container'>
         <HomeNav />
@@ -31,7 +37,7 @@ const RegistrationPage = () => {
 
             <section className='FormInput'>
                 <label>Confirm Passtword <span>*</span></label>
-                <input required type="password" placeholder='Confirm Passtword'></input>
+                <input required type="password" placeholder='Confirm Password'></input>
             </section>
 
             <section className="FormInput">
@@ -39,7 +45,7 @@ const RegistrationPage = () => {
             </section>
         </form>
         <section className='Option'>
-            <p>Already a member?</p><span>Sign In</span>
+            <p>Already a member?</p><span onClick={ToSignin}>Sign In</span>
         </section>
     </div>
   )

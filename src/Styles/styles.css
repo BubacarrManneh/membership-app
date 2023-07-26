@@ -1,9 +1,10 @@
 .App {
-  background:rgb(91, 165, 188);
+  background:  whitesmoke;
 }
 
 /* Home component */
 .Home {
+  background:#569bbd;
   margin: 0 10rem;
   height: 100dvh;
   overflow-y: hidden;
@@ -17,28 +18,29 @@
     padding: 1dvb;
   }
   
-/* Sign up component */
+/* Nav button style */
 .Btn {
   display: flex;
   align-items: center;
   font-size: .5em;
   padding-right: 1dvb;
-  background-color: rgb(63, 61, 61);
-  color:  rgb(249, 246, 246);
+  background-color: white;
+  color:  black;
+  border: none;
   border-radius: .5rem;
   cursor: pointer;
 }
+
 .BtnText {
   margin: 0 .2rem;
   padding: .5rem;
 }
 
 
-/* SignInPage */
+/* SignIn/SignUp pages */
 
 .Container {
-  /* margin: 1rem 0; */
-  background: rgb(91, 165, 188);
+  background: #800080;
   margin: 0 10rem;
   height: 100dvh;
   overflow-y: hidden;
