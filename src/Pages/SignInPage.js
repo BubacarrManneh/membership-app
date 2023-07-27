@@ -5,13 +5,25 @@ import { useNavigate } from 'react-router-dom';
 const SignInPage = () => {
     const [ data, setData ] = useState({
         email: "",
-        password: ""
+        password: "",
     })
    
 
-   const onChange = (e) => {
-        setData(console.log(e.target.value))
-   }
+    
+    const onChange = (e) => {
+        const {name, value} = e.target;
+        setData((prevData) => ({
+          ...prevData,[name]:value,
+         
+        }));
+        console.log(e.target.value);
+      };
+    
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('UserData:', data);
+      };
+
 
    const navigate = useNavigate()
 
@@ -27,16 +39,16 @@ const SignInPage = () => {
         <form className='Form' id='form'>
             <section className='FormInput'>
                 <label>Email <span>*</span></label>
-                <input type="email" onChange={onChange} required placeholder='Enter Email'></input>
+                <input type="email" name="email"  onChange={onChange} required placeholder='Enter Email'></input>
             </section>
 
             <section className='FormInput'>
                 <label>Password <span>*</span></label>
-                <input type="password" onChange={onChange} required placeholder='Enter password'></input>
+                <input type="password" name="password"  onChange={onChange} required placeholder='Enter password'></input>
             </section>
 
             <section className="FormInput">
-                <button type='submit' className='Submit' >Login</button>
+                <button type='submit' className='Submit' onClick={handleSubmit}>Login</button>
             </section>
         </form>
         <section className='Option'>
