@@ -11,7 +11,7 @@ import RegistrationPage from './Pages/RegistrationPage';
 
 function App() {
   return (
-    <div className="App" style={{ backgroundImage: `url(${background})`, backgroundRepeat: "no-repeat", backgroundSize: "cover", alignContent: "center"}}>
+    <div className="App" style={{ backgroundImage: `url(${background})`,backgroundSize: "cover"}}>
       <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignInPage />} />

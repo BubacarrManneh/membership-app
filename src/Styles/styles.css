@@ -1,5 +1,5 @@
 .App {
-  background:  whitesmoke;
+  background-position: center;
 }
 
 /* Home component */
@@ -40,7 +40,6 @@
 /* SignIn/SignUp pages */
 
 .Container {
-  /* background: #800080; */
   margin: 0 10rem;
   height: 100dvh;
   overflow-y: hidden;
@@ -100,20 +99,20 @@
   font-weight: bold;
 }
 
-.Option {
-  display: flex;
-  justify-content: center;
-  font-weight: bolder;
-}
+  .Option {
+    display: flex;
+    justify-content: center;
+    font-weight: bolder;
+  }
 
-.Option span {
-  margin: 0 .5dvb;
-  font-weight: bolder;
-  font-style: italic;
-  color: navajowhite;
-  cursor: pointer;
-  opacity: .9;
-}
+  .Option span {
+    margin: 0 .5dvb;
+    font-weight: bolder;
+    font-style: italic;
+    color: navajowhite;
+    cursor: pointer;
+    opacity: .9;
+  }
 
 /* Small screen styles */
 @media (max-width: 750px) {
