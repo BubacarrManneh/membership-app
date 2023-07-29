@@ -4,10 +4,10 @@
 
 /* Home component */
 .Home {
-  background:#569bbd;
   margin: 0 10rem;
   height: 100dvh;
   overflow-y: hidden;
+  background-size: cover;
 }
 
   .Components {
@@ -40,7 +40,7 @@
 /* SignIn/SignUp pages */
 
 .Container {
-  background: #800080;
+  /* background: #800080; */
   margin: 0 10rem;
   height: 100dvh;
   overflow-y: hidden;
@@ -103,12 +103,16 @@
 .Option {
   display: flex;
   justify-content: center;
+  font-weight: bolder;
 }
 
 .Option span {
   margin: 0 .5dvb;
-  color: black;
+  font-weight: bolder;
+  font-style: italic;
+  color: navajowhite;
   cursor: pointer;
+  opacity: .9;
 }
 
 /* Small screen styles */
