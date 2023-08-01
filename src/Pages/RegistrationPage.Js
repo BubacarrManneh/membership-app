@@ -12,6 +12,7 @@ const RegistrationPage = () => {
 
     })
     
+    const [matchPassword, setMatchPassword] = useState(true)
     
     
     const RegisterUser = ((e) => {
@@ -25,7 +26,14 @@ const RegistrationPage = () => {
     const FormSubmit = ((e) => {
         e.preventDefault();
        
-        console.log("User Info", userData)
+        if(userData.password1 === userData.password2){
+            console.log("User Info", userData)
+        }else{
+            setMatchPassword(false);
+            console.log("Passwords don't match");
+            return;
+        }
+
     })
 
     const navigate = useNavigate()
