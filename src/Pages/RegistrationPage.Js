@@ -26,6 +26,7 @@ const RegistrationPage = () => {
     const FormSubmit = ((e) => {
         e.preventDefault();
        
+        // Chech if passwords match
         if(userData.password1 === userData.password2){
             console.log("User Info", userData)
         }else{
@@ -34,8 +35,15 @@ const RegistrationPage = () => {
             return;
         }
 
+        // check if passwords pass the six character long requirement
+        if(userData.password1.length && userData.password2.length < 6){
+            console.log("password must be atleast six characters")
+        }else{
+            console.log("Password looks good")
+        }
     })
 
+    // Page navigattion
     const navigate = useNavigate()
 
     const ToSignin = (() => {
