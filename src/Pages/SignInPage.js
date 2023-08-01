@@ -16,7 +16,6 @@ const SignInPage = () => {
           ...prevData,[name]:value,
          
         }));
-        console.log(e.target.value);
       };
     
       const handleSubmit = (e) => {
