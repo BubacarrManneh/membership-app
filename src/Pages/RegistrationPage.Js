@@ -1,6 +1,6 @@
 import { useNavigate } from 'react-router-dom'
 import HomeNav from '../Components/HomeNav'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const RegistrationPage = () => {
     const [userData, SetUserData] = useState({
@@ -25,9 +25,10 @@ const RegistrationPage = () => {
 
     const FormSubmit = ((e) => {
         e.preventDefault();
-       
-        // Chech if passwords match
+        
+        // Chech if passwords match/ store User data
         if(userData.password1 === userData.password2){
+            localStorage.setItem("SignUp user data",JSON.stringify(userData))
             console.log("User Info", userData)
         }else{
             setMatchPassword(false);
@@ -43,12 +44,23 @@ const RegistrationPage = () => {
         }
     })
 
+    // Store user data to localstorage
+    useEffect(() => {
+    const userData = JSON.parse(localStorage.getItem("userData"))
+        if(userData){
+            SetUserData(userData)
+        }
+    }, [])
+
+
     // Page navigattion
     const navigate = useNavigate()
 
     const ToSignin = (() => {
         navigate("/signin")
     })
+
+ 
   return (
     <div className='Container'>
         <HomeNav />

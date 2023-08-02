@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import HomeNav from '../Components/HomeNav';
 import { useNavigate } from 'react-router-dom';
 
@@ -14,22 +14,30 @@ const SignInPage = () => {
         const {name, value} = e.target;
         setData((prevData) => ({
           ...prevData,[name]:value,
-         
+          
         }));
       };
     
       const handleSubmit = (e) => {
         e.preventDefault();
+        localStorage.setItem("SignIn user data", JSON.stringify(data))
         console.log('UserData:', data);
       };
 
+    // Store data to localstorage
+    useEffect(() => {
+      const data = JSON.parse(localStorage.getItem("data"))
+      if(data){
+        setData(data)
+      }
+    }, [])
 
-   const navigate = useNavigate()
+    const navigate = useNavigate()
 
-   const ToSignup = () => {
-     navigate("/signup")
-   }
- 
+    const ToSignup = () => {
+      navigate("/signup")
+    }
+
   return (
     <div className='Container'>
          <HomeNav />
